@@ -3,9 +3,9 @@ namespace Mastering\SampleModule\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
-class Config
+class ConfigLog
 {
-    const XML_PATH_ENABLED = 'mastering/general/enabled';
+    const XML_PATH_ENABLED = 'mastering/log/log_enabled';
 
     private $config;
 

@@ -18,8 +18,12 @@ class InstallSchema implements InstallSchemaInterface
         $table = $installer->getConnection()
             ->newTable($installer->getTable('mastering_sample_item'))
             ->addColumn('id', Table::TYPE_INTEGER, null, ['identity' => true, 'unsigned' => true, 'nullable' => false, 'primary' => true], 'Item ID')
-            ->addColumn('name', Table::TYPE_TEXT, 255, ['nullable' => false], 'Item name')
-            ->addindex($installer->getIdxName('mastering_sample_item', ['name']), ['name'])
+            ->addColumn('book_title', Table::TYPE_TEXT, 255, ['nullable' => false], 'Item book')
+            ->addColumn('author', Table::TYPE_TEXT, 255, ['nullable' => false], 'Item author')
+            ->addColumn('quantity_page', Table::TYPE_INTEGER, null, ['nullable' => false], 'Item quantity')
+            ->addColumn('language', Table::TYPE_TEXT, 100, ['nullable' => false], 'Item language')
+            ->addColumn('publishing_company', Table::TYPE_TEXT, 255, ['nullable' => false], 'Item publishing')
+            ->addindex($installer->getIdxName('mastering_sample_item', ['book_title']), ['book_title'])
             ->setComment('Sample Items');
         $installer->getConnection()->createTable($table);
 

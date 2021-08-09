@@ -3,4 +3,7 @@
     <event name="mastering_sample_item_save_after">
         <observer name="mastering_logger" instance="Mastering\SampleModule\Observer\Logger" />
     </event>
+    <event name="inside_table_page">
+        <observer name="mastering_logger" instance="Mastering\SampleModule\Observer\Logger" />
+    </event>
 </config>

@@ -9,7 +9,7 @@
         <item name="buttons" xsi:type="array">
             <item name="add" xsi:type="array">
                 <item name="name" xsi:type="string">add</item>
-                <item name="label" xsi:type="string" translate="true">Add Item</item>
+                <item name="label" xsi:type="string" translate="true">Add Book</item>
                 <item name="class" xsi:type="string">primary</item>
                 <item name="url" xsi:type="string">*/item/new</item>
             </item>
@@ -36,7 +36,6 @@
         <filterSearch name="fulltext"/>
         <filters name="listing_filters"/>
         <paging name="listing_paging"/>
-        <!-- <frontendLink name="frontend_link"/> -->
     </listingToolbar>
     <columns name="mastering_items_columns">
         <argument name="data" xsi:type="array">
@@ -60,19 +59,35 @@
                 </item>
             </argument>
         </selectionsColumn>
-        <column name="name">
+        <column name="book_title">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Name</item>
+                    <item name="label" xsi:type="string" translate="true">Book Title</item>
                 </item>
             </argument>
         </column>
-        <column name="description">
+        <column name="author">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Description</item>
+                    <item name="label" xsi:type="string" translate="true">Author</item>
+                </item>
+            </argument>
+        </column>
+        <column name="quantity_page">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Quantity Page</item>
+                </item>
+            </argument>
+        </column>
+        <column name="publishing_company">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Publishing Company</item>
                 </item>
             </argument>
         </column>

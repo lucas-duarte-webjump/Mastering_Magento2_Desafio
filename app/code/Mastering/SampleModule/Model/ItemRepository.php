@@ -15,6 +15,6 @@ class ItemRepository implements ItemRepositoryInterface
 
    public function getList()
    {
-       return $this->collectionFactory->create()->getItems(); 
+       return $this->collectionFactory->create()->getItems();
    }
 }

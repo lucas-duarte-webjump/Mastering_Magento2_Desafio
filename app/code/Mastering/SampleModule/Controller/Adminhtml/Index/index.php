@@ -30,7 +30,7 @@ class Index extends Action
     {
         /** @var Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
-        $resultPage->setActiveMenu('Mastering_SampleModule::mastering');
+        // $resultPage->setActiveMenu('Mastering_SampleModule::mastering');
         return $resultPage;
     }
 

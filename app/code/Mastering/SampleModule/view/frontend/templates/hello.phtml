@@ -1,9 +1,65 @@
 <?php
 /** @var \Mastering\SampleModule\Block\Hello $block */
 ?>
+
+<html>
+    <head>
+    <style>
+        .conteiner_mastering {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .conteiner_mastering > div {
+            border: 1px solid #d5d5d5;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        .conteiner_mastering_sample h3 {
+            color: #2D3047;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .conteiner_mastering > div > section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            white-space: nowrap;
+            flex-wrap: wrap;
+        }
+
+        .conteiner_mastering > div > section > span + span {
+            margin-top: 0.5rem;
+        }
+    </style>
+    </head>
+<body>
+    <h1>Lucas Livros</h1>
+
+<div class="conteiner_mastering">
 <?php foreach ($block->getItems() as $item): ?>
-<p>
-    <?php echo $item->getName() ?>: <?php echo $item->getDescription(); ?>
-</p>
+
+
+
+<div class="conteiner_mastering_sample">
+    <h3>
+        <?php echo $item->getBookTitle(); ?>: <?php echo $item->getAuthor(); ?>
+    </h3>
+    <section>
+        <span>páginas: <?php echo $item->getQuantityPage(); ?></span>
+        <span>linguagem: <?php echo $item->getLanguage(); ?></span>
+        <span>editora: <?php echo $item->getPublishingCompany(); ?></span>
+    </section>
+</div>
 
 <?php endforeach; ?>
+</div>
+</body>
+</html>
