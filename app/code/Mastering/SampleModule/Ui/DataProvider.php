@@ -1,4 +1,5 @@
 <?php
+
 namespace Mastering\SampleModule\Ui;
 
 use Magento\Ui\DataProvider\AbstractDataProvider;
@@ -14,20 +15,17 @@ class DataProvider extends AbstractDataProvider
         $collectionFactory,
         array $meta = [],
         array $data = []
-    )
-    {
+    ) {
         parent::__construct($name, $primaryFieldName, $requestFieldName, $meta, $data);
         $this->collection = $collectionFactory->create();
     }
 
-    public function getData() {
-
+    public function getData()
+    {
         $result = [];
-        foreach($this->collection->getItems() as $item) {
-            $result[$item ->getId()]['general'] = $item->getData();
+        foreach ($this->collection->getItems() as $item) {
+            $result[$item->getId()]['general'] = $item->getData();
         }
-
         return $result;
-
     }
 }
