@@ -10,6 +10,9 @@ class FrontendLink extends AbstractComponent
 {
     protected $urlBuilder;
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function __construct(
         ContextInterface $context,
         UrlInterface $urlBuilder,

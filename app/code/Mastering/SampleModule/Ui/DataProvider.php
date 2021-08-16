@@ -8,6 +8,9 @@ class DataProvider extends AbstractDataProvider
 {
     protected $collection;
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function __construct(
         $name,
         $primaryFieldName,

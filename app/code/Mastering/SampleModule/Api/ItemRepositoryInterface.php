@@ -1,6 +1,9 @@
 <?php
 namespace Mastering\SampleModule\Api;
 
+/**
+ * @codeCoverageIgnore
+ */
 interface ItemRepositoryInterface
 {
 

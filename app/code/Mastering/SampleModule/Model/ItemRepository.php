@@ -7,7 +7,7 @@ use Mastering\SampleModule\Model\ResourceModel\Item\CollectionFactory;
 class ItemRepository implements ItemRepositoryInterface
 {
 
-    private $collectionFactory;
+   private $collectionFactory;
 
    public function __construct(CollectionFactory $collectionFactory) {
        $this->collectionFactory = $collectionFactory;

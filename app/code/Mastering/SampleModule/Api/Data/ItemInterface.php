@@ -1,6 +1,8 @@
 <?php
 namespace Mastering\SampleModule\Api\Data;
-
+/**
+ * @codeCoverageIgnore
+ */
 interface ItemInterface
 {
     /**

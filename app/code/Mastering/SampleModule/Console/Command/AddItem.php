@@ -18,7 +18,9 @@ class AddItem extends Command
 
    private $itemFactory;
 
-
+   /**
+    * @codeCoverageIgnore
+    */
    public function __construct(ItemFactory $itemFactory) {
        $this->itemFactory = $itemFactory;
 

@@ -14,11 +14,19 @@ class Logger
     private $output;
 
 
+    public function __construct(OutputInterface $output)
+    {
+        $this->output = $output;
+    }
+
     public function beforeRun(AddItem $command, InputInterface $input, OutputInterface $output)
     {
         $output->writeln('beforeExecute');
     }
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function aroundRun(AddItem $command, \Closure $proceed, InputInterface $input, OutputInterface $output)
     {
         $output->writeln('aroundExecute before call');
@@ -27,9 +35,9 @@ class Logger
         $this->output = $output;
     }
 
-    public function afterRun(AddItem $command)
+    public function afterRun(AddItem $command, $result, InputInterface $input, OutputInterface $output)
     {
-        $this->output->writeln('afterExecute');
+        $output->writeln('afterExecute');
 
     }
 

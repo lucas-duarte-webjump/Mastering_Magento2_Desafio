@@ -1,10 +1,15 @@
 <?php
 
+
 namespace Mastering\SampleModule\Model;
 
 use Monolog\Logger;
 use Magento\Framework\Logger\Handler\Base;
 
+
+/**
+ * @codeCoverageIgnore
+ */
 class DebugHandler extends Base
 {
     /**

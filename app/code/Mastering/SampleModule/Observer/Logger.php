@@ -8,6 +8,9 @@ class Logger implements \Magento\Framework\Event\ObserverInterface
 {
     private $logger;
 
+    /**
+     * @codeCoverageIgnore
+     */
     public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
