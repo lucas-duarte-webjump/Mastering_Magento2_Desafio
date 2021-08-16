@@ -30,7 +30,7 @@ class LoggerTest extends TestCase
     {
         $this->logger->beforeRun($this->commandMock, $this->inputMock, $this->outputMock);
 
-        $this->outputMock->method('writeln')->with('beforeExecute');
+        $this->outputMock->expects($this->any())->method('writeln')->with('beforeExecute');
         $this->assertInstanceOf(Logger::class, $this->logger);
     }
 
@@ -38,7 +38,7 @@ class LoggerTest extends TestCase
     {
         $this->logger->afterRun($this->commandMock, [], $this->inputMock, $this->outputMock);
 
-        $this->outputMock->method('writeln')->with('afterExecute');
+        $this->outputMock->expects($this->any())->method('writeln')->with('afterExecute');
 
         $this->assertInstanceOf(Logger::class, $this->logger);
     }

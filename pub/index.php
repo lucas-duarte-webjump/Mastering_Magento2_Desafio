@@ -22,8 +22,9 @@ try {
 HTML;
     exit(1);
 }
-
+Magento\Framework\Profiler::start('bootstrap');
 $bootstrap = Bootstrap::create(BP, $_SERVER);
+Magento\Framework\Profiler::stop('bootstrap');
 /** @var \Magento\Framework\App\Http $app */
 $app = $bootstrap->createApplication(\Magento\Framework\App\Http::class);
 $bootstrap->run($app);

@@ -1,3 +1,5 @@
+SetEnv MAGE_PROFILER html
+
 ############################################
 ## Optional override of deployment mode. We recommend you use the
 ## command bin/magento deploy:mode:set to switch modes instead
@@ -270,4 +272,4 @@ ErrorDocument 403 /errors/404.php
     Header set X-Frame-Options SAMEORIGIN
 </IfModule>
 
-SetEnv MAGE_PROFILER csvfile
+
